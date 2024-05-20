@@ -1,3 +1,7 @@
 # Personal-Website
 
-This repository collects all assests needed to my presentation webpage or portfolio
+This repository collects all assets needed for my presentation webpage and academic portfolio.
+
+/n
+
+Please, go to the website for further information. 
