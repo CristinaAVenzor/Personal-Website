@@ -14,7 +14,7 @@ theme = "hugo-initio-main"
     avatarclass = "circle"
     background = ""
     banner = "images/bg_head1.png"
-    favicon = "images/gt_favicon.png"
+    favicon = "images/cristina_favicon.png"
     DateForm = "January 2, 2006"
     author = "Sergey Pozhilov (GetTemplate.com)"
 
