@@ -1,0 +1,174 @@
+---
+title: "Análisis de Instituciones Educativas \n en Aguascalientes, México"
+format:
+  html:
+    smooth-scroll: true
+    css: styles.css
+    self-contained: true
+    embed-resources: true
+editor: visual
+toc: true
+toc-title: "Tabla de contenidos"
+theme: flatly
+title-block-banner: true
+toc-depth: 2
+toc-expand: 2
+---
+
+# Acceso educativo
+
+En México, la discusión sobre el acceso a la educación a través de instituciones públicas y privadas se centra en temas clave como la equidad, la calidad educativa, y el papel del Estado. Aunque la educación pública ha sido la principal vía de acceso para la mayoría de los mexicanos, persisten desafíos en términos de cobertura, especialmente en zonas rurales.
+
+Por otro lado, la educación privada ha crecido significativamente, principalmente en áreas urbanas y niveles superiores, aunque su acceso está limitado a sectores más privilegiados. Esta dualidad ha generado una brecha en oportunidades educativas, exacerbando las desigualdades socioeconómicas. La discusión actual también incluye el debate sobre la regulación del sector privado y el financiamiento de ambas modalidades, en un contexto donde se busca garantizar el derecho a una educación de calidad para todos.
+
+# Distibución de escuelas por nivel educativo y sector
+
+```{r, include=FALSE, warning=FALSE}
+# Required Packages, and data set
+source("Settings.R")
+
+# Upload data
+
+schools <-  read_csv(paste0(path2SP,"Data/IEA_busqueda_08-08-2024.csv")) 
+
+
+education_path <- c(" MEDIA SUPERIOR",
+                    " SECUNDARIA",                  
+                    " PREESCOLAR",
+                    " PRIMARIA",                
+                    " SUPERIOR")
+
+
+matrix_profile <- as.data.frame(schools) %>%
+                  mutate(NIVEL = str_trim(NIVEL)) %>% 
+                  group_by(NIVEL, SOSTENIMIENTO) %>%
+                  summarise(value = n(), .groups = 'drop') %>%
+                  rename(source = SOSTENIMIENTO, target = NIVEL) %>% 
+                  filter(!target %in% c("CAPACITACION PARA EL TRABAJO", "ESPECIAL", "CONAFE", "INICIAL")) %>% 
+                  mutate(order_var = case_when(target == "PREESCOLAR" ~ 1, 
+                                               target == "PRIMARIA"   ~ 2,
+                                               target == "SECUNDARIA" ~ 3,
+                                               target == "MEDIA SUPERIOR" ~ 4,
+                                               target == "SUPERIOR"  ~ 5)) %>% 
+                arrange(order_var) %>% 
+                group_by(target)  %>%
+                mutate(
+                 value2plot = value / sum(value) * 100,
+                 value2plot = paste0(round(value2plot, 0), "%"), 
+                 # target = paste0(target, ", \n", value2plot)
+                 ) %>% 
+                ungroup() #%>% 
+                # group_by(source)  %>%
+                # mutate(
+                #   value2source = value / sum(value) * 100,
+                #   value2source = paste0(round(value2source, 0), "%"))
+
+
+nodes <- data.frame(
+                    name=c(as.character(matrix_profile$source), 
+                    as.character(matrix_profile$target)) %>% 
+                    unique())
+
+# With networkD3, connection must be provided using id, not using real name like in the links dataframe.. So we need to reformat it.
+matrix_profile$IDsource <- match(matrix_profile$source, nodes$name)-1 
+matrix_profile$IDtarget <- match(matrix_profile$target, nodes$name)-1
+
+# Make the Network
+p <- sankeyNetwork(Links = matrix_profile, 
+                   Nodes = nodes,
+                   Source = "IDsource", 
+                   Target = "IDtarget",
+                   Value = "value", 
+                   NodeID = "name", 
+                   sinksRight=FALSE,
+                   fontSize = 12)
+
+
+# Assuming you already have the matrix_profile_display data frame
+matrix_profile_display <-  matrix_profile %>% 
+  select(-order_var, -IDsource, -IDtarget) %>% 
+  rename(Nivel = target,
+         TIPO = source, 
+         Total = value,
+         Proporción = value2plot)
+
+# Convert to a flextable
+ft <- flextable(matrix_profile_display)
+
+# Apply conditional background color for rows where TIPO is "PÚBLICO"
+ft <- ft %>%
+  bg(i = ~ TIPO == "PÚBLICO", bg = "grey", part = "body") %>%
+  theme_vanilla() %>%
+  set_header_labels(
+    Nivel = "Nivel Educativo",
+    TIPO = "Tipo de Sostenimiento",
+    Total = "Total de Escuelas",
+    Proporción = "Proporción (%)"
+  ) %>%
+  fontsize(size = 10) %>%
+  bold(part = "header")
+
+
+
+```
+
+
+
+
+<br>
+
+::: panel-tabset
+## Gráfico
+
+```{r a34, include=TRUE, warning=FALSE, echo=FALSE, fig.height= 5}
+p
+```
+
+## Datos
+
+```{r c34, include=TRUE, warning=FALSE, echo=FALSE, fig.height= 8.5}
+ft
+```
+:::
+
+
+
+# Escuelas por ubicación
+
+```{r, include=FALSE, warning=FALSE}
+mapa <- st_read(paste0(path2SP,"Data/5_1_4_3_Municipios_shape")) %>% 
+        filter(CVE_ENT == "01")
+
+
+p <- ggplot(mapa) +
+  geom_sf(data  = mapa,
+          color = "grey65",
+          size  = 0.5) +
+  theme_minimal() +
+  theme(
+    plot.background = element_blank(),
+    axis.text       = element_blank(),
+    legend.position = "none",
+    panel.grid      = element_blank(),
+    panel.border    = element_blank(),
+    plot.margin     = margin(0,0,0,0)
+  )
+```
+
+
+<br>
+
+::: panel-tabset
+## Gráfico
+
+```{r a35, include=TRUE, warning=FALSE, echo=FALSE, fig.height= 5}
+p
+```
+
+## Datos
+
+```{r c35, include=TRUE, warning=FALSE, echo=FALSE, fig.height= 8.5}
+matrix_profile
+```
+:::
+
