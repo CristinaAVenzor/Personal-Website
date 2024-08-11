@@ -52,14 +52,8 @@ matrix_profile <- as.data.frame(schools) %>%
                 group_by(target)  %>%
                 mutate(
                  value2plot = value / sum(value) * 100,
-                 value2plot = paste0(round(value2plot, 0), "%"), 
-                 # target = paste0(target, ", \n", value2plot)
-                 ) %>% 
-                ungroup() #%>% 
-                # group_by(source)  %>%
-                # mutate(
-                #   value2source = value / sum(value) * 100,
-                #   value2source = paste0(round(value2source, 0), "%"))
+                 value2plot = paste0(round(value2plot, 0), "%")) %>% 
+                ungroup() 
 
 
 nodes <- data.frame(
@@ -126,40 +120,61 @@ ft
 
 
 data2plot <- as.data.frame(schools) %>%
-  mutate(NIVEL = str_trim(NIVEL)) %>% 
+  mutate(NIVEL = str_trim(NIVEL),
+         MUNICIPIO = str_trim(MUNICIPIO)) %>% 
   group_by(MUNICIPIO) %>%
   summarise(value = n(), .groups = 'drop') %>%
-  rename(source = SOSTENIMIENTO, target = NIVEL) %>% 
-  filter(!target %in% c("CAPACITACION PARA EL TRABAJO", "ESPECIAL", "CONAFE", "INICIAL")) %>% 
-  mutate(order_var = case_when(target == "PREESCOLAR" ~ 1, 
-                               target == "PRIMARIA"   ~ 2,
-                               target == "SECUNDARIA" ~ 3,
-                               target == "MEDIA SUPERIOR" ~ 4,
-                               target == "SUPERIOR"  ~ 5)) %>% 
-  arrange(order_var) %>% 
-  group_by(target)  %>%
   mutate(
     value2plot = value / sum(value) * 100,
-    value2plot = paste0(round(value2plot, 0), "%"), 
-    # target = paste0(target, ", \n", value2plot)
-  ) %>% 
-  ungroup() #%>% 
-# group_by(source)  %>%
-# mutate(
-#   value2source = value / sum(value) * 100,
-#   value2source = paste0(round(value2source, 0), "%"))
-
+    value2plot = paste0(round(value2plot, 0), "%")) 
 
 
 mapa <- st_read(paste0(path2SP,"Data/5_1_4_3_Municipios_shape")) %>% 
         filter(CVE_ENT == "01") %>% 
-        mutate(NOMGEO = case_when(NOMGEO == ))
+        mutate(NOMGEO = case_when(NOMGEO == "Aguascalientes"         ~ "AGUASCALIENTES",
+                                  NOMGEO == "Asientos"               ~ "ASIENTOS",
+                                  NOMGEO == "Calvillo"               ~ "CALVILLO",
+                                  NOMGEO == "Cos\xedo"               ~ "COSÍO",
+                                  NOMGEO == "Jes\xfas Mar\xeda"      ~ "JESÚS MARÍA",
+                                  NOMGEO == "Pabell\xf3n de Arteaga" ~ "ENCARNACIÓN DE DÍAZ",
+                                  NOMGEO == "Rinc\xf3n de Romos"     ~ "RINCÓN DE ROMOS",
+                                  NOMGEO == "San Jos\xe9 de Gracia"  ~ "SAN JOSÉ DE GRACIA",
+                                  NOMGEO == "Tepezal\xe1"            ~ "TEPEZALÁ",
+                                  NOMGEO == "El Llano"               ~ "EL LLANO",
+                                  NOMGEO == "San Francisco de los Romo" ~ "SAN FRANCISCO DE LOS ROMO")) %>% 
+      rename(MUNICIPIO = NOMGEO)
 
 
-p <- ggplot(mapa) +
-  geom_sf(data  = mapa,
+
+ags_map <- mapa %>%
+  left_join(data2plot, by = "MUNICIPIO") %>%
+  mutate(
+    color_group = case_when(
+      value  <= 60   ~ "bajo",
+      value  <= 250  ~ "medio",
+      value  <= 1342   ~ "alto"
+    ),
+    color_group = as.factor(color_group)
+  )
+
+cat_palette <- c( "bajo"  = "#99D7DD",
+                  "medio"  = "#0087A3",
+                  "alto" = "#004E70")
+# Drawing plot
+p <- ggplot(ags_map, aes(label = MUNICIPIO)) +
+  geom_sf(data  = ags_map,
+          aes(fill = color_group),
           color = "grey65",
           size  = 0.5) +
+  geom_sf(data  = ags_map,
+          fill  = NA,
+          color = "grey25") +
+  scale_fill_manual("",
+                    values   = cat_palette,
+                    na.value = "grey95",
+                    drop = F) +
+  # scale_y_continuous(limits = c(1445631, 5273487)) +
+  # scale_x_continuous(limits = c(2581570, 5967160)) +
   theme_minimal() +
   theme(
     plot.background = element_blank(),
@@ -169,6 +184,33 @@ p <- ggplot(mapa) +
     panel.border    = element_blank(),
     plot.margin     = margin(0,0,0,0)
   ); p
+
+
+
+## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##
+## 1.1. Proporción de escuelas públicas y privadas por nivel - DATOS ----
+##                                                      
+## +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+# Convert to a flextable
+ft <- flextable(data2plot)
+
+# Apply conditional background color for rows where TIPO is "PÚBLICO"
+ft <- ft %>%
+  theme_vanilla() %>%
+  set_header_labels(
+    MUNICIPIO = "Nivel Educativo",
+    value = "Total de Escuelas",
+    value2plot = "Proporción (%)"
+  ) %>%
+  fontsize(size = 10) %>%
+  bold(part = "header")
+
+# Display the flextable
+ft
+
 
   
   
