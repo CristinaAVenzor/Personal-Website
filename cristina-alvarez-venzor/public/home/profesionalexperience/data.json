@@ -1,20 +1,20 @@
 [
     {
         "id": 0,
-        "name": "Educational Landscape of Aguascalientes",
-        "image": "images/schools.png",
+        "name": "Center of Research in Economics (CIDE)",
+        "image": "images/logo-cide.png",
         "url": "#",
         "items": [
             {
-                "name": "Go to microsite",
-                "url": "https://cristinaavenzor.github.io/EduMap_Aguascalientes/"
+                "name": "Go to website",
+                "url": "https://cide-edna.org/noticias"
             }
         ]
     },
     {
-        "id": 1,
-        "name": "Pure ipsum - development services for people",
-        "image": "images/s1.jpg",
+        "id": 2,
+        "name": "The World Justice Project",
+        "image": "images/logo-wjp.png",
         "url": "#",
         "items": [
             {
@@ -28,9 +28,9 @@
         ]
     },
     {
-        "id": 2,
-        "name": "Lorem studios - interior and patio design",
-        "image": "images/s1.jpg",
+        "id": 1,
+        "name": "Rand Corporation",
+        "image": "images/logo-rand.png",
         "url": "#",
         "items": [
             {
@@ -38,9 +38,10 @@
                 "url": "#"
             },
             {
-                "name": "Logotype",
+                "name": "Wordpress",
                 "url": "#"
             }
         ]
     }
+
 ]

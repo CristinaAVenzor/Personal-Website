@@ -4,16 +4,16 @@ title = "Initio - Free, multipurpose html5 template by GetTemplate"
 theme = "hugo-initio-main"
 
 [params]
-    name = ""
+    name = "Cristina Alvarez Venzor"
     description = ""
-    email = ""
-    phone = "+234 23 9873237"
-    address = "234 Hidden Pond Road, Ashland City, TN 37015"
-    year = 2017
+    email = "venzor@rand.org"
+    phone = ""
+    address = ""
+    year = 2024
     avatar = "images/Imagen 1.jpg"
     avatarclass = "circle"
     background = ""
-    banner = "images/bg_head1.png"
+    banner = "images/bg_head.png"
     favicon = "images/cristina_favicon.png"
     DateForm = "January 2, 2006"
     author = "Sergey Pozhilov (GetTemplate.com)"
@@ -52,21 +52,21 @@ theme = "hugo-initio-main"
 	title = "facebook"
 	url = "https://www.facebook.com/nickname"
     icon = "fab fa-facebook-square"
-    footer = true
+    footer = false
     sharethis = true
     network = "facebook"
 [[params.social]]
 	title = "twitter"
 	url = "https://twitter.com/nickname"
     icon = "fab fa-twitter-square"
-    footer = true
+    footer = false
     sharethis = true
     network = "twitter"
 [[params.social]]
 	title = "instagram"
 	url = "https://www.instagram.com/nickname"
     icon = "fab fa-instagram"
-    footer = true
+    footer = false
     sharethis = false
     network = ""
 [[params.social]]
@@ -78,9 +78,9 @@ theme = "hugo-initio-main"
     network = "googleplus"
 [[params.social]]
 	title = "linkedin"
-	url = "https://www.linkedin.com/in/nickname"
+	url = "https://www.linkedin.com/in/cristina-%C3%A1lvarez-venzor-902939270/"
     icon = "fab fa-linkedin"
-    footer = false
+    footer = true
     sharethis = true
     network = "linkedin"
 [[params.social]]
@@ -92,15 +92,15 @@ theme = "hugo-initio-main"
     network = "tumblr"
 [[params.social]]
 	title = "github"
-	url = "https://github.com/nickname"
+	url = "https://github.com/CristinaAVenzor"
     icon = "fab fa-github"
     footer = true
     sharethis = false
     network = ""
 [[params.social]]
 	title = "email"
-	url = "mailto:some.email@somewhere.com"
+	url = "venzor@rand.org"
     icon = "fas fa-envelope-square"
-    footer = false
+    footer = true
     sharethis = true
     network = "email"

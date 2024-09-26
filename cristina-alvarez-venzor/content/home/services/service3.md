@@ -1,9 +1,11 @@
 +++
-title = "Application development"
+title = "Bilingual Translation"
 +++
 
-I don't think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn't eat for three weeks. i once heard a wise man say there are no perfect men.
+As a native Spanish speaker and fluent English communicator, I have the ability to translate highly technical documents, reports, and data outputs from English to Spanish and vice versa.
 
 <!--more-->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This ability ensures that key stakeholders across borders can access, understand, and apply the insights derived from your analyses. Your translations maintain technical accuracy while adapting to the cultural and linguistic nuances necessary for effective communication in both the US and Latin America.
+
+

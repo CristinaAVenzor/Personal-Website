@@ -1,9 +1,9 @@
 +++
-title = "Wordpress integration"
+title = "Data Analytics and Modeling"
 +++
 
-I don't think they tried to market it to the billionaire, spelunking, base-jumping crowd. i did the same thing to gandhi, he didn't eat for three weeks. i once heard a wise man say there are no perfect men.
+With a strong foundation in policy analysis, supported by a Bachelor's degree in Policy Analysis and a Master’s in Methods for Public Policy Analysis, I bring a robust methodological approach to data analytics. 
 
 <!--more-->
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Proficient in statistical software such as R, Python, and SQL, you excel in performing rigorous data analysis, building predictive models, and conducting causal inference studies. Your analytical work is grounded in advanced econometric and statistical techniques, ensuring that your models are both methodologically sound and tailored to address complex organizational challenges. This combination of technical expertise and methodological rigor enables you to provide actionable insights that drive evidence-based decision-making in high-impact environments.

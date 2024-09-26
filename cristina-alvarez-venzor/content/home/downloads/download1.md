@@ -1,7 +1,7 @@
 +++
-title = "Download original template"
+title = "Download Cristina's CV"
 file = "https://drive.google.com/uc?export=download&id=1yUK6NG52zKoE0H_OPraOqHyo9mEGRXwG"
 weight = 1
 +++
 
-Try to dowmload cv. A simple, nice-looking **CV**. Boxing is about respect. getting it for yourself, and taking it away from the other guy. no, this is mount everest.
+I invite you to explore my professional background and expertise in more detail by **downloading my CV**. It provides a comprehensive overview of my skills, experience, and contributions across various sectors, including data analytics, policy evaluation, and consulting.

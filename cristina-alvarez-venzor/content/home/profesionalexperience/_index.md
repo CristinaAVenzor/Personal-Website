@@ -1,7 +1,7 @@
 +++
-title = "Technical Skills Samples"
+title = "Professional experience"
 type = "recentwork"
 file = "data.json"
-weight = 2
+weight = 3
 +++
 
