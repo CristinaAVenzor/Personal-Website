@@ -10,3 +10,5 @@ cristina-alvarez-venzor/themes/hugo-initio-main/static/images/avatar_man.png
 *.png
 *.jpg
 .Rproj.user
+cristina-alvarez-venzor/public/
+sites/
