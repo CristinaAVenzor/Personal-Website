@@ -2,7 +2,7 @@
 title = "Data Analytics and Modeling"
 +++
 
-With a strong foundation in policy analysis, supported by a Bachelor's degree in Policy Analysis and a Master’s in Methods for Public Policy Analysis, I bring a robust methodological approach to data analytics. 
+With a strong foundation in policy analysis, backed by a Bachelor's in Policy Analysis and a Master's in Methods for Public Policy Analysis, I apply a rigorous methodologies to data analytics.
 
 <!--more-->
 

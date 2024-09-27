@@ -99,7 +99,7 @@ theme = "hugo-initio-main"
     network = ""
 [[params.social]]
 	title = "email"
-	url = "venzor@rand.org"
+	url = "mailto:venzor@rand.org"
     icon = "fas fa-envelope-square"
     footer = true
     sharethis = true

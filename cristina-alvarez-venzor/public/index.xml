@@ -6,6 +6,7 @@
     <description>Recent content on Initio - Free, multipurpose html5 template by GetTemplate</description>
     <generator>Hugo</generator>
     <language>en</language>
+    <lastBuildDate>Tue, 10 Sep 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Download Cristina&#39;s CV</title>
@@ -13,6 +14,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/home/downloads/download1/</guid>
       <description>I invite you to explore my professional background and expertise in more detail by downloading my CV. It provides a comprehensive overview of my skills, experience, and contributions across various sectors, including data analytics, policy evaluation, and consulting.</description>
+    </item>
+    <item>
+      <title>From Challenge to Change: My Passion for Educational Access and Methodological Research</title>
+      <link>http://localhost:1313/post/vivamus-lacus-mauris/</link>
+      <pubDate>Tue, 10 Sep 2024 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/vivamus-lacus-mauris/</guid>
+      <description>Growing up in a tiny community in Mexico, I experienced firsthand the transformative power of education. My personal journey inspired me to focus my research on the profound impact that educational access and quality have on life outcomes.&#xA;As I progressed through my studies, I became increasingly drawn to technology in education and methodological approaches like impact evaluation and causal inference. I am particularly passionate about exploring how blended learning models and AI-driven tools can improve access to education in marginalized communities.</description>
     </item>
     <item>
       <title></title>
@@ -33,7 +41,14 @@
       <link>http://localhost:1313/home/services/service2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/home/services/service2/</guid>
-      <description>&lt;p&gt;With a strong foundation in policy analysis, supported by a Bachelor&amp;rsquo;s degree in Policy Analysis and a Master’s in Methods for Public Policy Analysis, I bring a robust methodological approach to data analytics.&lt;/p&gt;</description>
+      <description>&lt;p&gt;With a strong foundation in policy analysis, backed by a Bachelor&amp;rsquo;s in Policy Analysis and a Master&amp;rsquo;s in Methods for Public Policy Analysis, I apply a rigorous methodologies to data analytics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DATA GATHERING AND MANAGEMENT</title>
+      <link>http://localhost:1313/home/services/service5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/services/service5/</guid>
+      <description>&lt;p&gt;By designing efficient and methodologically sound data collection methods, I can help capture insights through surveys, interviews, focus groups, or administrative records.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Data visualization</title>
@@ -43,11 +58,32 @@
       <description>&lt;p&gt;I specialize in turning complex data sets into clear, actionable visualizations using tools like Ggplot2, Rmarkdown and Quarto in R, Stremlite in Python, Tableau, and Power BI.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Innovative Thinking</title>
+      <link>http://localhost:1313/home/services/service8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/services/service8/</guid>
+      <description>&lt;p&gt;I constantly seek new and creative ways to approach challenges, combining innovative thinking with a commitment to personal growth.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Multi-Sectoral Problem Solving</title>
       <link>http://localhost:1313/home/services/service4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/home/services/service4/</guid>
       <description>&lt;p&gt;My experience spans not only the Mexican and US contexts but also a diverse portfolio of sectors, including education policy evaluation, justice system assessments, and health data analysis.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>POLICY BRIEF WRITING</title>
+      <link>http://localhost:1313/home/services/service6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/services/service6/</guid>
+      <description>&lt;p&gt;My ability to craft clear, concise, and actionable policy briefs ensures that your organization can easily communicate complex research findings or recommendations to both technical and non-technical audiences.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Teamwork and Collaboration</title>
+      <link>http://localhost:1313/home/services/service7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/services/service7/</guid>
+      <description>&lt;p&gt;I’m great at bringing people together, especially when different areas of expertise need to collaborate.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

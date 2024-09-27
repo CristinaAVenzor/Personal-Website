@@ -1,12 +1,12 @@
 [
     {
         "id": 0,
-        "name": "Center of Research in Economics (CIDE)",
+        "name": "Center for Research and Teaching in Economics (CIDE)",
         "image": "images/logo-cide.png",
         "url": "https://cide-edna.org/noticias",
         "items": [
             {
-                "name": "Go to website",
+                "name": "Official Website",
                 "url": "https://cide-edna.org/noticias"
             }
         ]
@@ -18,28 +18,21 @@
         "url": "https://worldjusticeproject.mx/",
         "items": [
             {
-                "name": "Web design",
-                "url": "#"
-            },
-            {
-                "name": "Wordpress",
-                "url": "#"
+                "name": "Official Website",
+                "url": "https://worldjusticeproject.mx/"
             }
+            
         ]
     },
     {
         "id": 1,
-        "name": "Rand Corporation",
-        "image": "images/logo-rand.png",
-        "url": "#",
+        "name": "Zpin tech",
+        "image": "images/logo-zpin.png",
+        "url": "https://zpin.tech/",
         "items": [
             {
-                "name": "Web design",
-                "url": "#"
-            },
-            {
-                "name": "Wordpress",
-                "url": "#"
+                "name": "Official Website",
+                "url": "https://zpin.tech/"
             }
         ]
     }

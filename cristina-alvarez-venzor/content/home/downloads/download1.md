@@ -1,6 +1,6 @@
 +++
 title = "Download Cristina's CV"
-file = "https://drive.google.com/uc?export=download&id=1yUK6NG52zKoE0H_OPraOqHyo9mEGRXwG"
+file = "https://drive.google.com/uc?export=download&id=1X7I3s5UXAFNZL2wnKweLD5IsbDP4Sy8w"
 weight = 1
 +++
 

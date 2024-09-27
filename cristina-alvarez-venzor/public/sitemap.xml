@@ -8,9 +8,18 @@
   </url><url>
     <loc>http://localhost:1313/home/recentworks/</loc>
   </url><url>
-    <loc>http://localhost:1313/home/prfesionalexperience/</loc>
+    <loc>http://localhost:1313/home/profesionalexperience/</loc>
   </url><url>
     <loc>http://localhost:1313/home/downloads/</loc>
+  </url><url>
+    <loc>http://localhost:1313/post/vivamus-lacus-mauris/</loc>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2024-09-10T12:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/home/subheader/</loc>
   </url><url>
@@ -20,11 +29,11 @@
   </url><url>
     <loc>http://localhost:1313/home/services/service2/</loc>
   </url><url>
+    <loc>http://localhost:1313/home/services/service5/</loc>
+  </url><url>
     <loc>http://localhost:1313/home/services/service1/</loc>
   </url><url>
     <loc>http://localhost:1313/home/</loc>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
   </url><url>
     <loc>http://localhost:1313/home/services/service4/</loc>
   </url><url>

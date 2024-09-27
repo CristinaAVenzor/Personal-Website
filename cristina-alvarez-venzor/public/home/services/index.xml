@@ -19,7 +19,14 @@
       <link>http://localhost:1313/home/services/service2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/home/services/service2/</guid>
-      <description>&lt;p&gt;With a strong foundation in policy analysis, supported by a Bachelor&amp;rsquo;s degree in Policy Analysis and a Master’s in Methods for Public Policy Analysis, I bring a robust methodological approach to data analytics.&lt;/p&gt;</description>
+      <description>&lt;p&gt;With a strong foundation in policy analysis, backed by a Bachelor&amp;rsquo;s in Policy Analysis and a Master&amp;rsquo;s in Methods for Public Policy Analysis, I apply a rigorous methodologies to data analytics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DATA GATHERING AND MANAGEMENT</title>
+      <link>http://localhost:1313/home/services/service5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/services/service5/</guid>
+      <description>&lt;p&gt;By designing efficient and methodologically sound data collection methods, I can help capture insights through surveys, interviews, focus groups, or administrative records.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Data visualization</title>
@@ -34,6 +41,27 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/home/services/service4/</guid>
       <description>&lt;p&gt;My experience spans not only the Mexican and US contexts but also a diverse portfolio of sectors, including education policy evaluation, justice system assessments, and health data analysis.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>POLICY BRIEF WRITING</title>
+      <link>http://localhost:1313/home/services/service6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/services/service6/</guid>
+      <description>&lt;p&gt;My ability to craft clear, concise, and actionable policy briefs ensures that your organization can easily communicate complex research findings or recommendations to both technical and non-technical audiences.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Teamwork and Collaboration</title>
+      <link>http://localhost:1313/home/services/service7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/services/service7/</guid>
+      <description>&lt;p&gt;I’m great at bringing people together, especially when different areas of expertise need to collaborate.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Teamwork and Collaboration</title>
+      <link>http://localhost:1313/home/services/service8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/home/services/service8/</guid>
+      <description>&lt;p&gt;I’m great at bringing people together, especially when different areas of expertise need to collaborate.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
